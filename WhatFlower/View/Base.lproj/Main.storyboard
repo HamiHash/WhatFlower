@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Os-jR-WFI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FpU-31-da9">
+                                <rect key="frame" x="0.0" y="103" width="393" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FpU-31-da9" secondAttribute="height" multiplier="393:323" id="eqd-v8-IKc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-JD-fDk">
+                                <rect key="frame" x="16" y="434" width="361" height="384"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FpU-31-da9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="APk-Eu-Hvn"/>
+                            <constraint firstItem="FpU-31-da9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vb1-Ic-QT7"/>
+                            <constraint firstItem="o5i-JD-fDk" firstAttribute="top" secondItem="FpU-31-da9" secondAttribute="bottom" constant="8" symbolic="YES" id="dy9-fD-OGr"/>
+                            <constraint firstItem="o5i-JD-fDk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lQx-Jn-anb"/>
+                            <constraint firstItem="o5i-JD-fDk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ngZ-xq-idf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o5i-JD-fDk" secondAttribute="trailing" constant="16" id="uE1-6M-uUT"/>
+                            <constraint firstItem="FpU-31-da9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wWG-y4-9tf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Te-9W-Aj9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="If3-cK-4JA">
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="Enf-8o-qnh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="FpU-31-da9" id="GSU-RV-EKq"/>
+                        <outlet property="textDescription" destination="o5i-JD-fDk" id="tr1-ij-BoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nxa-AL-cYX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Os-jR-WFI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bw1-Y1-ZYu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YvZ-ZI-8sg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsb-n4-cGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
